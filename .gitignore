@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+Plaintext
+# Local configuration
+config.js
+config.local.js
+
+# OS files
+.DS_Store
+Thumbs.db

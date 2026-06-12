@@ -1,0 +1,64 @@
+HTML
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>남구 런-핏 (Run-Fit)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-wrapper">
+    <div class="dashboard-container">
+      
+      <div class="left-panel">
+        <div class="video-wrapper">
+          <video id="input-video" autoplay playsinline muted></video>
+          <canvas id="output-canvas"></canvas>
+          <div class="live-indicator">LIVE SCANNING</div>
+        </div>
+        
+        <div class="status-bar">
+          <div id="weather-info" class="weather-info">📡 기상 데이터를 불러오는 중...</div>
+          <div id="pacemaker-voice" class="voice-msg">"AI 페이스메이커가 러닝 환경을 분석 중입니다."</div>
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div class="panel-header">
+          <h2>RUN-FIT <span class="highlight">ANALYSIS</span></h2>
+          <p>실시간 신체 밸런스 및 자세 모니터링</p>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="m-label">어깨 기울기</span>
+            <strong id="shoulder-diff" class="m-value">0.00 <span class="unit">cm</span></strong>
+          </div>
+          
+          <div class="metric-card">
+            <span class="m-label">골반 기울기</span>
+            <strong id="hip-diff" class="m-value">0.00 <span class="unit">cm</span></strong>
+          </div>
+          
+          <div class="metric-card rewards">
+            <span class="m-label">RUN-FIT POINTS</span>
+            <strong id="reward-points" class="m-value text-neon">0 <span class="unit">P</span></strong>
+          </div>
+        </div>
+
+        <div class="feedback-container">
+          <h3>SYSTEM FEEDBACK</h3>
+          <div class="feedback-screen">
+            <p id="coaching-message">카메라 연결을 대기하고 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
